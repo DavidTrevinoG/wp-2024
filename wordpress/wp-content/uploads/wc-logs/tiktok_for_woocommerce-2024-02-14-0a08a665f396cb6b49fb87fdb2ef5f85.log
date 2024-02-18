@@ -1,0 +1,92 @@
+2024-02-14T13:27:16+00:00 DEBUG POST: https://ads.tiktok.com/marketing_api/api/developer/app/create_auto_approve/
+
+{"business_platform":"PROD","smb_id":"tt4b_woocommerce_65ccbfb49ea7ahttplocalhost8888wordpresswp-admin","smb_name":"PROD","redirect_url":"http:\/\/localhost:8888\/wordpress\/wp-admin\/"}
+ ajax: no
+2024-02-14T13:27:17+00:00 DEBUG Tt4b_Mapi_Class::create_open_source_app: Response: 
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+X-Tt-Logid: 20240214132716765B1D3FB859503F90EF,20240214132716765B1D3FB859503F90EF
+Strict-Transport-Security: max-age=31536000; includeSubDomains
+x-tt-trace-host: 01b7280f2b86dbbcf336c757db66c4b1f143b066e5ca675435316a78461a9e9783c5b3b9f6d45a635f058205a9bc5c8c74b2f1d2ec851d1e2f6cc0e6a4ec8d20caf81b5e5fa3adc3fadee9f55897b73ef1715b823f7e3969cb97efd97e63656fa23d4fbd8fe87e1ad90fe82769b29001dc
+x-tt-trace-id: 00-240214132716765B1D3FB859503F90EF-425716A413D2D75E-00
+Server: TLB
+Content-Encoding: gzip
+Content-Length: 210
+X-Origin-Response-Time: 139,23.40.40.157
+X-Akamai-Request-ID: c270e162.aa774c39
+Date: Wed, 14 Feb 2024 13:27:17 GMT
+X-Cache: TCP_MISS from a23-62-23-176.deploy.akamaitechnologies.com (AkamaiGHost/11.4.1-53905076) (-)
+Connection: close
+Vary: Accept-Encoding
+X-Cache-Remote: TCP_MISS from a23-40-40-157.deploy.akamaitechnologies.com (AkamaiGHost/11.4.1-53905076) (-)
+x-tt-trace-tag: id=16;cdn-cache=miss;type=dyn
+Server-Timing: cdn-cache; desc=MISS, edge; dur=211, origin; dur=139
+Server-Timing: inner; dur=125
+X-Parent-Response-Time: 348,23.62.23.176
+
+{"code":0,"msg":"ok","data":{"app_id":"7335448679005814785","app_secret":"9048613c40502ce3b04b9325ea531403c81b6cd4","external_data_key":"374ab5b3-02a8-4f15-98d5-6349d4435be6","redirect_uri":"http:\/\/localhost:8888\/wordpress\/wp-admin\/"}}
+
+2024-02-14T13:51:18+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T13:51:18+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T13:51:45+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T13:51:45+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T13:52:55+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T13:52:55+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T13:59:00+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T13:59:00+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T13:59:13+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T13:59:13+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:02:24+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:02:24+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:02:55+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:02:55+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:03:21+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:14:04+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:14:04+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:17:34+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:17:34+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:17:54+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:17:54+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:31:01+00:00 DEBUG tt4b_product_delete: missing access token for tt4b_product_sync
+2024-02-14T14:33:09+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:33:09+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:36:37+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:36:37+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:38:05+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:38:05+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:38:15+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:38:15+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:38:20+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:38:20+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:40:29+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:40:29+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:43:56+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:43:56+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:44:13+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:44:13+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
+2024-02-14T14:53:17+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: hit ViewContent
+2024-02-14T14:53:17+00:00 DEBUG Tt4b_Pixel_Class::inject_view_content_event: Missing option "access_token"
