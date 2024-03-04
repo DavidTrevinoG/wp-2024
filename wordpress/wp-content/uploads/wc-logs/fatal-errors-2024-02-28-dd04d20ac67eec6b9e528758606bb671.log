@@ -1,0 +1,63 @@
+2024-02-28T03:27:44+00:00 CRITICAL Uncaught TypeError: ftp_nlist(): Argument #1 ($ftp) must be of type FTP\Connection, null given in /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php:438
+Stack trace:
+#0 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(438): ftp_nlist()
+#1 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(456): WP_Filesystem_FTPext->exists()
+#2 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(399): WP_Filesystem_FTPext->is_file()
+#3 /var/www/html/wordpress/wp-content/themes/woodmart/inc/modules/styles-storage/class-styles-storage.php(325): WP_Filesystem_FTPext->delete()
+#4 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/options/class-themesettingscss.php(130): XTS\Modules\Styles_Storage->delete_file()
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): XTS\Themesettingscss->write_file()
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#8 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/options/class-page.php(182): do_action()
+#9 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/templates/theme_settings.php(3): XTS\Admin\Modules\Options\Page->page_content()
+#10 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/class-dashboard.php(642): include_once('...')
+#11 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/class-dashboard.php(576): XTS\Admin\Modules\Dashboard->print_template()
+#12 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): XTS\Admin\Modules\Dashboard->page_content()
+#13 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#14 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#15 /var/www/html/wordpress/wp-admin/admin.php(259): do_action()
+#16 {main}
+  thrown in /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php on line 438
+
+2024-02-28T03:28:56+00:00 CRITICAL Uncaught TypeError: ftp_nlist(): Argument #1 ($ftp) must be of type FTP\Connection, null given in /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php:438
+Stack trace:
+#0 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(438): ftp_nlist()
+#1 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(456): WP_Filesystem_FTPext->exists()
+#2 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(399): WP_Filesystem_FTPext->is_file()
+#3 /var/www/html/wordpress/wp-content/themes/woodmart/inc/modules/styles-storage/class-styles-storage.php(325): WP_Filesystem_FTPext->delete()
+#4 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/options/class-themesettingscss.php(130): XTS\Modules\Styles_Storage->delete_file()
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): XTS\Themesettingscss->write_file()
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#8 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/options/class-page.php(182): do_action()
+#9 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/templates/theme_settings.php(3): XTS\Admin\Modules\Options\Page->page_content()
+#10 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/class-dashboard.php(642): include_once('...')
+#11 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/class-dashboard.php(576): XTS\Admin\Modules\Dashboard->print_template()
+#12 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): XTS\Admin\Modules\Dashboard->page_content()
+#13 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#14 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#15 /var/www/html/wordpress/wp-admin/admin.php(259): do_action()
+#16 {main}
+  thrown in /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php on line 438
+
+2024-02-28T13:51:54+00:00 CRITICAL Uncaught TypeError: ftp_nlist(): Argument #1 ($ftp) must be of type FTP\Connection, null given in /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php:438
+Stack trace:
+#0 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(438): ftp_nlist()
+#1 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(456): WP_Filesystem_FTPext->exists()
+#2 /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php(399): WP_Filesystem_FTPext->is_file()
+#3 /var/www/html/wordpress/wp-content/themes/woodmart/inc/modules/styles-storage/class-styles-storage.php(325): WP_Filesystem_FTPext->delete()
+#4 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/options/class-themesettingscss.php(130): XTS\Modules\Styles_Storage->delete_file()
+#5 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): XTS\Themesettingscss->write_file()
+#6 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#7 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#8 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/options/class-page.php(182): do_action()
+#9 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/templates/theme_settings.php(3): XTS\Admin\Modules\Options\Page->page_content()
+#10 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/class-dashboard.php(642): include_once('...')
+#11 /var/www/html/wordpress/wp-content/themes/woodmart/inc/admin/modules/dashboard/class-dashboard.php(576): XTS\Admin\Modules\Dashboard->print_template()
+#12 /var/www/html/wordpress/wp-includes/class-wp-hook.php(324): XTS\Admin\Modules\Dashboard->page_content()
+#13 /var/www/html/wordpress/wp-includes/class-wp-hook.php(348): WP_Hook->apply_filters()
+#14 /var/www/html/wordpress/wp-includes/plugin.php(517): WP_Hook->do_action()
+#15 /var/www/html/wordpress/wp-admin/admin.php(259): do_action()
+#16 {main}
+  thrown in /var/www/html/wordpress/wp-admin/includes/class-wp-filesystem-ftpext.php on line 438
+
