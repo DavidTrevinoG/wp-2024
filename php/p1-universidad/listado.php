@@ -42,9 +42,7 @@ $result = $conn->query($sql);
                     <td><?php echo $row['carrera_nombre'];?></td>
                     <td>
                             <a href="editar_alumno.php?id=<?php echo $row['id'];?>" class="btn btn-primary">Editar</a>
-                            <form class="d-inline-block" action="crud.php?eliminar_alumno=<?php echo $row['id_carrera'];?>" method="post">
-                                <button type="submit" class="btn btn-danger">Eliminar</button
-                            </form>
+                            <a href="crud.php?eliminar_alumno=<?php echo $row['id'];?>" class="btn btn-danger">Eliminar</a>
                     </td>
                     </tr>
                     <?php } ?>

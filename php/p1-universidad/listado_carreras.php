@@ -33,9 +33,7 @@ $result = $conn->query($sql);
                     <td><?php echo $row['nombre'];?></td>
                     <td>
                             <a href="editar_carrera.php?id_carrera=<?php echo $row['id_carrera'];?>" class="btn btn-primary">Editar</a>
-                            <form class="d-inline-block" action="crud.php?eliminar_carrera=<?php echo $row['id_carrera'];?>" method="post">
-                                <button type="submit" class="btn btn-danger">Eliminar</button
-                            </form>
+                            <a href="crud.php?eliminar_carrera=<?php echo $row['id_carrera'];?>" class="btn btn-danger">Eliminar</a>
                     </td>
                     </tr>
                     <?php } ?>

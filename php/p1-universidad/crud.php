@@ -77,7 +77,7 @@ if(isset($_GET['eliminar_carrera'])){
     $id = $_GET['eliminar_carrera'];
 
     //Query para eliminar valores de la tabla carreras
-    $sql = "DELETE FROM carreras WHERE id = '$id'";
+    $sql = "DELETE FROM carrera WHERE id_carrera = '$id'";
     $result = $conn->query($sql);
     header('Location: listado_carreras.php');
 
