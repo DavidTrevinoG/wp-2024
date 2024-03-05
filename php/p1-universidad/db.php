@@ -3,7 +3,7 @@
 // Conexión a la base de datos
 $server_name = "localhost";
 $user_name = "root";
-$password = "";
+$password = "root";
 $dbname = "universidad";
 
 // Crear conexión
