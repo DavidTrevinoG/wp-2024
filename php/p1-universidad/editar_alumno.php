@@ -12,7 +12,7 @@
         <div class="container mt-5">
             <h2>Editar Alumno</h2>
             <form action="crud.php" method="POST">
-                <input type="hidden" value="<?php echo $_GET['id']; ?>">
+                <input type="hidden" value="<?php echo $_GET['id']; ?>" name="id">
                 <?php 
                 $result = $conn->query("SELECT * FROM alumnos WHERE id = ".$_GET['id']);
                 $result = $result->fetch_assoc();
