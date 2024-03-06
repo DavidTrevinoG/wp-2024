@@ -41,6 +41,7 @@ $result = $conn->query($sql);
                 </tbody>
             </table>
             <a href="alta_carrera.php" class="btn btn-success">Agregar Carrera</a>
+            <a href="exportar_carreras.php" class="btn btn-success">Exportar</a>
         </div>
     </body>
 </html>

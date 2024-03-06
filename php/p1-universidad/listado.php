@@ -17,7 +17,7 @@ $result = $conn->query($sql);
     <body>
         <div class="container mt-5">
             <h2> Listado de Alumnos</h2>
-            <table class="table">
+            <table class="table" id="table">
                 <thead>
                     <th>ID Alumno</th>
                     <th>Matrícula</th>
@@ -49,6 +49,20 @@ $result = $conn->query($sql);
                 </tbody>
             </table>
             <a href="alta_alumno.php" class="btn btn-success">Agregar Alumno</a>
+            <a href="exportar_alumnos.php" class="btn btn-success">Exportar</a>
+            <!--<button class="btn btn-success" onclick="exportReportToExcel(this)">Exportar</button>-->
         </div>
     </body>
+
+    <script type="text/javascript">  
+    
+    function exportReportToExcel() {  
+        let table = document.getElementsByID("table");  
+        TableToExcel.convert(table[0], {  
+             name: `file.xlsx`,  
+             sheet: {  name: 'Sheet 1'  }  
+            }); 
+         } 
+    </script>
 </html>
+

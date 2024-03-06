@@ -98,8 +98,8 @@ if(isset($_GET['eliminar_carrera'])){
 
 //Cambios de carreras
 if(isset($_POST['cambio_carrera'])){
-    $id = $_POST['id'];
-    $nombre = $_POST['nombre'];
+    $id = $_POST['id_carrera'];
+    $nombre = $_POST['carrera'];
 
     //Query para modificar los valores de la tabla carreras
     $sql = "UPDATE carrera SET nombre = '$nombre' WHERE id_carrera = '$id'";
