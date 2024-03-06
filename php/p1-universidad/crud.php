@@ -76,15 +76,24 @@ if(isset($_POST['alta_carrera'])){
 if(isset($_GET['eliminar_carrera'])){
     $id = $_GET['eliminar_carrera'];
 
-    //Query para eliminar valores de la tabla carreras
-    $sql = "DELETE FROM carrera WHERE id_carrera = '$id'";
-    $result = $conn->query($sql);
-    header('Location: listado_carreras.php');
+    //Query para verificar si hay alumnos en la carrera
+    $result = $conn->query("SELECT * FROM alumnos WHERE id_carrera = '$id'");
 
-    if(!$result){
-        die("Query failed");
+    if ($result->num_rows == 0) {
+        //Query para eliminar valores de la tabla carreras
+        $sql = "DELETE FROM carrera WHERE id_carrera = '$id'";
+        $result = $conn->query($sql);
+        header('Location: listado_carreras.php');
+
+        if(!$result){
+            die("Query failed");
+        }
+        echo "Carrera dada de baja";
+    } else {
+        echo "No se puede eliminar la carrera, hay alumnos inscritos";
     }
-    echo "Carrera dada de baja";
+
+  
 }
 
 //Cambios de carreras

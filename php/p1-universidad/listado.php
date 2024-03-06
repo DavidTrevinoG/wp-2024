@@ -29,7 +29,6 @@ $result = $conn->query($sql);
                 </thead>
                 <tbody>
                     <?php 
-
                         // Recorrido en la tabla de carreras para obtener los registros
                         while ($row = $result->fetch_assoc()){ 
                     ?>
