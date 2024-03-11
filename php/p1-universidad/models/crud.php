@@ -270,7 +270,7 @@ if(isset($_POST['subir_calificaciones'])){
         $result_insert = $conn->query($insert);
     }
 
-    //header('Location: ../views/calificaciones.php?id_carrera='.$id_carrera.'&id_materia='.$id_materia.'');
+    header('Location: ../views/calificaciones.php?id_carrera='.$id_carrera.'&id_materia='.$id_materia.'');
 
     if(!$result){
         die("Query failed");

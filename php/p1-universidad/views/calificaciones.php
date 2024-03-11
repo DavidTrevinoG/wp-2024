@@ -100,13 +100,13 @@ $result = $conn->query($sql);
                     function actualizar() {
                         carreraId = document.getElementById('carrera').value;
                         select2 = document.getElementById('materia');
-                        window.location.href = "calificaciones.php?id_carrera=" + carreraId;
+                        window.location = "calificaciones.php?id_carrera=" + carreraId;
                     }
 
                     function select() {
                         var materiaId = document.getElementById('materia').value;
                     
-                        window.location.href = "calificaciones.php?id_carrera=" + <?php echo $_GET['id_carrera']; ?> + "&id_materia=" + materiaId;
+                        window.location = "calificaciones.php?id_carrera=" + <?php echo $_GET['id_carrera']; ?> + "&id_materia=" + materiaId;
                         
                     }
 
