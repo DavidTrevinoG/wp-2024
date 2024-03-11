@@ -69,9 +69,38 @@ $result = $conn->query($sql);
 
             </tbody>
             </table>
+           
+        </div>
+        <div class="container mt-5">
+            <h2> Listado de Materias</h2>
+            <table class="table" id="table">
+                <thead>
+                    <th>ID Materia</th>
+                    <th>Nombre</th>
+                    <th>Unidades</th>
+                </thead>
+                <tbody>
+                    <?php 
+                        // Recorrido en la tabla de materias para obtener los registros
+                        $sql = 'SELECT * FROM materias';
+                        $result = $conn->query($sql);
+                        while ($row = $result->fetch_assoc()){ 
+                    ?>
+                    <tr>
+                    <td><?php echo $row['id_materia']; ?></td>
+                    <td><?php echo $row['nombre'];?></td>
+                    <td><?php echo $row['unidades'];?></td>
+        
+                
+                    </tr>
+                    <?php } ?>
+
+                </tbody>
+            </table>
             <a href="../models/exportar_ac.php" class="btn btn-success">Exportar</a>
             <a href="../index.php" class="btn btn-primary">Regresar</a>
         </div>
+        
 </table>
 
 

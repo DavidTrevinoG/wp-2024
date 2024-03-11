@@ -159,7 +159,7 @@ error_reporting(0)
             <button type="submit" class="btn btn-primary" name="subir_calificaciones">Subir Calificaciones</button>
             </form>
            
-            <a href="../models/exportar_carreras.php?id" class="btn btn-success">Exportar XLS</a>
+            <a href="../models/exportar_calificaciones.php?id_carrera=<?php echo $carreraId; ?>&id_materia=<?php echo $materiaId; ?>" class="btn btn-success">Exportar XLS</a>
             <a href="../index.php" class="btn btn-primary">Regresar</a>
 
         </div>
