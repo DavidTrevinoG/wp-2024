@@ -177,7 +177,7 @@ $result = $conn->query($sql);
         function select() {
             var materiaId = document.getElementById('materia').value;
 
-            window.location = "calificaciones.php?id_carrera=" + <?php echo $_GET['id_carrera']; ?> + "&id_materia=" + materiaId;
+            window.location = "calificaciones.php?id_carrera=" + <?php echo isset($_GET['id_carrera']); ?> + "&id_materia=" + materiaId;
             
         }
 
