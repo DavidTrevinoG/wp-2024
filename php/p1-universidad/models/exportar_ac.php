@@ -99,18 +99,11 @@ $result = $conn->query($sql);
                     <td><?php echo $row['nombre'];?></td>
                     <td><?php echo $row['unidades'];?></td>
         
-                    <td>
-                            <a href="editar_materia.php?id_materia=<?php echo $row['id_materia'];?>" class="btn btn-primary">Editar</a>
-                            <a href="../models/crud.php?eliminar_materia=<?php echo $row['id_materia'];?>" class="btn btn-danger">Eliminar</a>
-                    </td>
                     </tr>
                     <?php } ?>
 
                 </tbody>
             </table>
-            <a href="alta_materia.php" class="btn btn-success">Agregar Materia</a>
-            <a href="../models/exportar_materias.php" class="btn btn-success">Exportar XLS</a>
-            <a href="../index.php" class="btn btn-primary">Regresar</a>
         </div>
 </table>
 
