@@ -6,7 +6,7 @@
     <body>
         <div class="container mt-5">
             <h2>Alta de Alumno</h2>
-            <form action="crud.php" method="POST">
+            <form action="../models/crud.php" method="POST">
                 <div class="form-group">
                     <label for="matricula">Matrícula: </label>
                     <input type="text" class="form-control" id="matricula" name="matricula" required>
@@ -28,7 +28,7 @@
                     <label for="id_carrera">Carrera:</label>
                     <select class="form-control" name="id_carrera" required>
                         <?php
-                            include 'db.php';
+                            include '../config/db.php';
                             $sql = "SELECT * FROM carrera";
                             $result = $conn->query($sql);
                             while ($row = $result->fetch_assoc()){

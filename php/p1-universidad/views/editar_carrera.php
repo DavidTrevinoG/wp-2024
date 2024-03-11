@@ -7,13 +7,13 @@
     <body>
         <div class="container mt-5">
             <h2>Editar Carrera</h2>
-            <form action="crud.php" method="POST">
+            <form action="../models/crud.php" method="POST">
                 <div class="form-group">
                     <input type="hidden" value="<?php echo $_GET['id_carrera'];?>" name="id_carrera">
                     <label for="carrera">Nombre de la carrera</label>
                     <input type="text" class="form-control" id="carrera" name="carrera" value="<?php
                     
-                    include ('db.php');
+                    include ('../config/db.php');
                     $id = $_GET['id_carrera'];
                     $sql = "SELECT * FROM carrera WHERE id_carrera = '$id'";
                     

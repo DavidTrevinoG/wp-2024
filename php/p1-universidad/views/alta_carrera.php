@@ -7,7 +7,7 @@
     <body>
         <div class="container mt-5">
             <h2>Alta de Carrera</h2>
-            <form action="crud.php" method="POST">
+            <form action="../models/crud.php" method="POST">
                 <div class="form-group">
                     <label for="nombre_carrera">Nombre de la carrera</label>
                     <input type="text" class="form-control" id="nombre_carrera" name="nombre_carrera" required>

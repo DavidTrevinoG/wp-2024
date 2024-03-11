@@ -1,7 +1,7 @@
 <?php
 
 // Conexión a la base de datos
-include 'db.php';
+include '../config/db.php';
 
 // Consulta SQL para obtener todos los registros de la tabla alumnos
 $sql = 'SELECT alumnos.id, alumnos.matricula, alumnos.nombre, alumnos.edad, alumnos.email, 
@@ -40,8 +40,9 @@ $result = $conn->query($sql);
                     <td><?php echo $row['email'];?></td>
                     <td><?php echo $row['carrera_nombre'];?></td>
                     <td>
+                            <a href="asignar_materiaalumno.php?id=<?php echo $row['id'];?>" class="btn btn-info">Materias</a>
                             <a href="editar_alumno.php?id=<?php echo $row['id'];?>" class="btn btn-primary">Editar</a>
-                            <a href="crud.php?eliminar_alumno=<?php echo $row['id'];?>" class="btn btn-danger">Eliminar</a>
+                            <a href="../models/crud.php?eliminar_alumno=<?php echo $row['id'];?>" class="btn btn-danger">Eliminar</a>
                     </td>
                     </tr>
                     <?php } ?>
@@ -49,20 +50,10 @@ $result = $conn->query($sql);
                 </tbody>
             </table>
             <a href="alta_alumno.php" class="btn btn-success">Agregar Alumno</a>
-            <a href="exportar_alumnos.php" class="btn btn-success">Exportar</a>
-            <!--<button class="btn btn-success" onclick="exportReportToExcel(this)">Exportar</button>-->
+            <a href="../models/exportar_alumnos.php" class="btn btn-success">Exportar XLS</a>
+            <a href="../index.php" class="btn btn-primary">Regresar</a>
         </div>
     </body>
 
-    <script type="text/javascript">  
-    
-    function exportReportToExcel() {  
-        let table = document.getElementsByID("table");  
-        TableToExcel.convert(table[0], {  
-             name: `file.xlsx`,  
-             sheet: {  name: 'Sheet 1'  }  
-            }); 
-         } 
-    </script>
 </html>
 

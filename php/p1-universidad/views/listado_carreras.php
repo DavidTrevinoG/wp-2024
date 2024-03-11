@@ -1,7 +1,7 @@
 <?php
 
 // Conexión a la base de datos
-include 'db.php';
+include '../config/db.php';
 
 // Consulta SQL para obtener todos los registros de la tabla carrera
 $sql = "SELECT * FROM carrera";
@@ -32,8 +32,9 @@ $result = $conn->query($sql);
                     <td><?php echo $row['id_carrera']; ?></td>
                     <td><?php echo $row['nombre'];?></td>
                     <td>
+                            <a href="asignar_materias.php?id_carrera=<?php echo $row['id_carrera'];?>" class="btn btn-info">Materias</a>
                             <a href="editar_carrera.php?id_carrera=<?php echo $row['id_carrera'];?>" class="btn btn-primary">Editar</a>
-                            <a href="crud.php?eliminar_carrera=<?php echo $row['id_carrera'];?>" class="btn btn-danger">Eliminar</a>
+                            <a href="../models/crud.php?eliminar_carrera=<?php echo $row['id_carrera'];?>" class="btn btn-danger">Eliminar</a>
                     </td>
                     </tr>
                     <?php } ?>
@@ -41,7 +42,8 @@ $result = $conn->query($sql);
                 </tbody>
             </table>
             <a href="alta_carrera.php" class="btn btn-success">Agregar Carrera</a>
-            <a href="exportar_carreras.php" class="btn btn-success">Exportar</a>
+            <a href="../models/exportar_carreras.php" class="btn btn-success">Exportar XLS</a>
+            <a href="../index.php" class="btn btn-primary">Regresar</a>
         </div>
     </body>
 </html>
