@@ -12,8 +12,33 @@ $result = $conn->query($sql);
         <title>Calificaciones</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     </head>
+    <script>
+
+        var carreraId;
+        var select2;
+
+        function actualizar() {
+            carreraId = document.getElementById('carrera').value;
+            select2 = document.getElementById('materia');
+            window.location = "calificaciones.php?id_carrera=" + carreraId;
+        }
+
+        function select() {
+            var materiaId = document.getElementById('materia').value;
+
+            window.location = "calificaciones.php?id_carrera=" + <?php echo $_GET['id_carrera']; ?> + "&id_materia=" + materiaId;
+            
+        }
+
+        var calificaciones = [];
+        var id_alumno;
+        var unidades;
+
+
+        </script>
     <body>
         <div class="container mt-5">
+            
             <h2>Calificaciones</h2>
             <form method="POST" action="" id="miFormulario">
                 <div class="form-group">
@@ -92,30 +117,7 @@ $result = $conn->query($sql);
                     </select>
                 </div>
 
-                <script>
-
-                    var carreraId;
-                    var select2;
-
-                    function actualizar() {
-                        carreraId = document.getElementById('carrera').value;
-                        select2 = document.getElementById('materia');
-                        window.location = "calificaciones.php?id_carrera=" + carreraId;
-                    }
-
-                    function select() {
-                        var materiaId = document.getElementById('materia').value;
-                    
-                        window.location = "calificaciones.php?id_carrera=" + <?php echo $_GET['id_carrera']; ?> + "&id_materia=" + materiaId;
-                        
-                    }
-
-                    var calificaciones = [];
-                    var id_alumno;
-                    var unidades;
-
-                   
-                </script>
+               
 
                 <button type="submit" class="btn btn-primary">Mostrar Alumnos</button>
             </form>
