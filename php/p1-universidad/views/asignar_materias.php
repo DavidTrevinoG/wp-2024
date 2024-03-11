@@ -1,5 +1,6 @@
 <?php
 
+//Conexión a la base de datos
 include '../config/db.php';
 $sql = "SELECT * FROM carrera where id_carrera = ".$_GET['id_carrera']."";
 $resul = $conn->query($sql);
@@ -29,7 +30,7 @@ $resul = $resul->fetch_assoc();
                         
                         <?php
 
-
+                            // Consulta SQL para obtener todos los registros de la tabla materia_carrera
                             $sqlite = "SELECT * FROM materia_carrera WHERE id_materia = ".$row['id_materia']." AND id_carrera = ".$resul['id_carrera']."";
                             $result_sqlite = $conn->query($sqlite);
 

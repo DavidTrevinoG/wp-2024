@@ -32,7 +32,7 @@ error_reporting(0)
         <div class="container mt-5">
             
             <?php 
-
+                // Recorrido en la tabla de carreras para obtener los registros
                 $sql = "SELECT * FROM carrera where id_carrera = ".$carreraId."";
                 $resul = $conn->query($sql);
                 $resul = $resul->fetch_assoc();
@@ -48,7 +48,7 @@ error_reporting(0)
             ?>
             <h2>Calificaciones <?php echo $nombreCarrera." - ".$nombreMateria ?></h2>
             <?php
-
+                // Consulta SQL para obtener todos los registros de la tabla alumnos
                 $sql = "SELECT * FROM alumno_materia WHERE id_materia = ".$materiaId."";
                 $result = $conn->query($sql);
 
@@ -60,6 +60,7 @@ error_reporting(0)
                                     <th>Nombre</th>
                                     ";
             
+                    // Recorrido en la tabla de carreras para obtener los registros
                     $res = $conn->query("SELECT * FROM materias WHERE id_materia = ".$materiaId."");
                     $r = $res->fetch_assoc();
                     for($i = 1; $i <= $r['unidades']; $i++){
@@ -73,7 +74,7 @@ error_reporting(0)
                         $resulti = $conn->query($sqli);
                         $rew = $resulti->fetch_assoc();
 
-                
+                        // Recorrido en la tabla de carreras para obtener los registros
                         echo "<tr>
                                 <td>" . $rew['nombre'] . "</td>";
                         $array_calificaciones = explode(", ", $row['calificaciones']);

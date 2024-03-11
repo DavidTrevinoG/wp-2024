@@ -24,6 +24,7 @@
                     <input type="text" class="form-control" id="email" name="email" required>
                 </div>
 
+            
                 <div class="form-group">
                     <label for="id_carrera">Carrera:</label>
                     <select class="form-control" name="id_carrera" required>
@@ -32,7 +33,10 @@
                             $sql = "SELECT * FROM carrera";
                             $result = $conn->query($sql);
                             while ($row = $result->fetch_assoc()){
+
+                                // Recorrido en la tabla de carreras para obtener los registros
                         ?>
+                        
                         <option value=<?php echo $row['id_carrera'];?>><?php echo $row['nombre'];?></option>
                         <?php } ?>
                     </select>

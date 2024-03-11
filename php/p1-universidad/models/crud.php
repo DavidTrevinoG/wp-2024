@@ -131,6 +131,7 @@ if(isset($_POST['cambio_carrera'])){
     echo "Carrera modificada";
 }
 
+//Cambios de materias
 if(isset($_POST['cambio_materia'])){
     $id = $_POST['id_materia'];
     $nombre = $_POST['materia'];
@@ -148,6 +149,7 @@ if(isset($_POST['cambio_materia'])){
 
 }
 
+//Baja de materias
 if(isset($_GET['eliminar_materia'])){
     $id = $_GET['eliminar_materia'];
 
@@ -170,6 +172,7 @@ if(isset($_GET['eliminar_materia'])){
     }
 }
 
+//Asignar materias a carreras
 if(isset($_POST['asignar_materias'])){
     $materias = $_POST['materias'];
     $id_carrera = $_POST['id_carrera'];
@@ -200,6 +203,8 @@ if(isset($_POST['asignar_materias'])){
     echo "Materias asignadas";
 
 }
+
+//Asignar materias a alumnos
 
 if(isset($_POST['asignar_materias_alumnos'])){
     $materias = $_POST['materias'];
@@ -246,6 +251,7 @@ if(isset($_POST['asignar_materias_alumnos'])){
     
 }
 
+//Subir calificaciones
 if(isset($_POST['subir_calificaciones'])){
     $id_carrera = $_POST['id_carrera'];
     $id_materia = $_POST['id_materia'];

@@ -1,5 +1,6 @@
 <?php
 
+//Conexión a la base de datos
 include '../config/db.php';
 $sql = "SELECT * FROM  alumnos where id = ".$_GET['id']."";
 $resul = $conn->query($sql);
@@ -20,6 +21,7 @@ $resul = $resul->fetch_assoc();
                 <div class="form-group">
                     <label for="materias">Materias:</label>
                     <?php
+                    // Consulta SQL para obtener todos los registros de la tabla materias
                     $sql = "SELECT * FROM materia_carrera where id_carrera = ".$resul['id_carrera']."";
                     $result = $conn->query($sql);
                     while ($row = $result->fetch_assoc()){
@@ -33,7 +35,7 @@ $resul = $resul->fetch_assoc();
                         
                         <?php
 
-
+                            // Consulta SQL para obtener todos los registros de la tabla alumno_materia
                             $sqlite = "SELECT * FROM alumno_materia WHERE id_alumno = ".$resul['id']." AND id_materia = ".$row2['id_materia']."";
                             $result_sqlite = $conn->query($sqlite);
 

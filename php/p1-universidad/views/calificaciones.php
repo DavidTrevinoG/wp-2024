@@ -34,6 +34,8 @@ error_reporting(0)
                         
                         disabled>Selecciona una carrera</option>
                         <?php
+
+                        // Recorrido en la tabla de carreras para obtener los registros
                         while ($row = $result->fetch_assoc()) {
                             if(isset($_GET['id_carrera'])){
                                 if($_GET['id_carrera'] == $row['id_carrera']){
@@ -67,10 +69,12 @@ error_reporting(0)
                        disabled >Selecciona una materia</option>
                         <?php 
 
+                           
                             if(isset($_GET['id_carrera'])){
                                 $carreraId = $_GET['id_carrera'];
                                 $sql = "SELECT * FROM materia_carrera WHERE id_carrera = ".$carreraId."";
                                 $result = $conn->query($sql);
+                                // Recorrido en la tabla de materias para obtener los registros
                                 while ($row = $result->fetch_assoc()) {
                                     $materiaId = $row['id_materia'];
                                     $sql = "SELECT * FROM materias WHERE id_materia = ".$materiaId."";
@@ -102,15 +106,19 @@ error_reporting(0)
             <form method="POST" action="../models/crud.php">
                 
             <?php
-            $carreraId = 0;
-            $materiaId = 0;
+
             if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $carreraId = $_POST['carrera'];
                 $materiaId = $_POST['materia'];
+                
             ?>
+
                 <input type="hidden" name="id_carrera" value="<?php echo $carreraId;?>">
                 <input type="hidden" name="id_materia" value="<?php echo $materiaId;?>">
             <?php
+
+                
+                // Consulta SQL para obtener todos los registros de la tabla alumnos
 
                 $sql = "SELECT * FROM alumno_materia WHERE id_materia = ".$materiaId."";
                 $result = $conn->query($sql);
@@ -130,6 +138,8 @@ error_reporting(0)
                     echo"</tr>
                             </thead>
                             <tbody>";
+
+                    // Recorrido en la tabla de carreras para obtener los registros
                     while ($row = $result->fetch_assoc()) {
                         $sqli = "SELECT * FROM alumnos WHERE id = ".$row['id_alumno']." AND id_carrera = ".$carreraId."";
                         $resulti = $conn->query($sqli);
@@ -141,7 +151,7 @@ error_reporting(0)
                         $array_calificaciones = explode(", ", $row['calificaciones']);
                      
                         for($i = 0; $i < $r['unidades']; $i++){
-                            echo "<td><input name='calificacion".$row['id_alumno']."[]' type='text' value=" . $array_calificaciones[$i]. "></td>";
+                            echo "<td><input name='calificacion".$row['id_alumno']."[]' type='number' value=" . $array_calificaciones[$i]. "></td>";
                         }
                         echo  "</tr>";
             
@@ -178,7 +188,7 @@ error_reporting(0)
         function select() {
             var materiaId = document.getElementById('materia').value;
 
-            window.location = "calificaciones.php?id_carrera=" + <?php echo isset($_GET['id_carrera']); ?> + "&id_materia=" + materiaId;
+            window.location = "calificaciones.php?id_carrera=" +  <?php echo $carreraId ?> + "&id_materia=" + materiaId;
             
         }
 
