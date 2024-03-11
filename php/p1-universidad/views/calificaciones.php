@@ -5,6 +5,7 @@ include '../config/db.php';
 
 $sql = "SELECT * FROM carrera";
 $result = $conn->query($sql);
+error_reporting(0)
 ?>
 
 <html lang="es">
