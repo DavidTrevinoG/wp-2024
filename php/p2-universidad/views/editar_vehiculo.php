@@ -3,7 +3,7 @@
 //Conexión a la base de datos
 include '../config/db.php';
 
-$id_vehiculo = isset($_GET['id_vehiculo']);
+$id_vehiculo = $_GET['id_vehiculo'];
 
 $result = $conn->query("SELECT * FROM vehiculos WHERE id_vehiculo = ".$id_vehiculo);
 $result = $result->fetch_assoc();
