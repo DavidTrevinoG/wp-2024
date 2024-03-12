@@ -10,8 +10,8 @@ $db = "practica2";
 $conn = new mysqli($host, $user, $pass, $db);
 
 // Verificar la conexión
-if ($mysqli->connect_errno) {
-    echo "Fallo al conectar a MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
+if ($conn->connect_errno) {
+    echo "Fallo al conectar a MySQL: (" . $conn->connect_errno . ") " . $conn->connect_error;
 }
 
 ?>
