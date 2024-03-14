@@ -17,7 +17,7 @@ if(isset($_POST['alta_vehiculo'])){
     $result = $conn->query($query);
 
     if(!$result){
-        die("Query Failed");
+        die("No puede ser eliminado debido a que tiene registros relacionados");
     }
 
     header('Location: ../views/listado_vehiculos.php');
@@ -31,7 +31,7 @@ if(isset($_GET['eliminar_id_vehiculo'])){
     $result = $conn->query($query);
 
     if(!$result){
-        die("Query Failed");
+        die("No puede ser eliminado debido a que tiene registros relacionados");
     }
 
     header('Location: ../views/listado_vehiculos.php');
@@ -53,10 +53,107 @@ if(isset($_POST['editar_vehiculo'])){
     $result = $conn->query($query);
 
     if(!$result){
-        die("Query Failed");
+        die("No puede ser eliminado debido a que tiene registros relacionados");
     }
 
     header('Location: ../views/listado_vehiculos.php');
+}
+
+//Agregar servicio
+if(isset($_POST['alta_servicios'])){
+    $nombre = $_POST['nombre'];
+    $costo = $_POST['costo'];
+
+    $query = "INSERT INTO servicios(nombre, costo) VALUES ('$nombre', '$costo')";
+    $result = $conn->query($query);
+
+    if(!$result){
+        die("No puede ser eliminado debido a que tiene registros relacionados");
+    }
+
+    header('Location: ../views/listado_servicios.php');
+
+}
+
+//Eliminar un servicio
+if(isset($_GET['eliminar_id_servicios'])){
+    $id_servicio = $_GET['eliminar_id_servicios'];
+
+    $query = "DELETE FROM servicios WHERE id_servicios = $id_servicio";
+    $result = $conn->query($query);
+
+    if(!$result){
+        die("No puede ser eliminado debido a que tiene registros relacionados");
+    }
+
+    header('Location: ../views/listado_servicios.php');
+
+}
+
+//Editar un servicio
+if(isset($_POST['editar_servicios'])){
+    $id_servicios = $_POST['id_servicios'];
+    $nombre = $_POST['nombre'];
+    $costo = $_POST['costo'];
+
+    $query = "UPDATE servicios SET nombre = '$nombre', costo = '$costo' WHERE id_servicios = $id_servicios";
+    $result = $conn->query($query);
+
+    if(!$result){
+        die("No puede ser eliminado debido a que tiene registros relacionados");
+    }
+
+    header('Location: ../views/listado_servicios.php');
+}
+
+//Agregar taller
+if(isset($_POST['alta_taller'])){
+    $fecha = $_POST['fecha'];
+    $id_servicio = $_POST['id_servicio'];
+    $id_vehiculo = $_POST['id_vehiculo'];
+
+    $query = "INSERT INTO prestacion_taller(fecha_ingreso, id_servicio, id_vehiculo) VALUES ('$fecha', '$id_servicio', '$id_vehiculo')";
+    $result = $conn->query($query);
+
+    if(!$result){
+        die("No puede ser eliminado debido a que tiene registros relacionados");
+    }
+
+    header('Location: ../views/listado_taller.php');
+
+}
+
+//Eliminar un taller
+if(isset($_GET['eliminar_id_taller'])){
+    $id_taller = $_GET['eliminar_id_taller'];
+
+    $query = "DELETE FROM prestacion_taller WHERE id_taller = $id_taller";
+    $result = $conn->query($query);
+
+    if(!$result){
+        die("No puede ser eliminado debido a que tiene registros relacionados");
+    }
+
+    header('Location: ../views/listado_taller.php');
+
+}
+
+//Editar un taller
+if(isset($_POST['editar_taller'])){
+    $id_taller = $_POST['id_taller'];
+    $fecha = $_POST['fecha'];
+    $id_servicio = $_POST['id_servicio'];
+    $id_vehiculo = $_POST['id_vehiculo'];
+
+    $query = "UPDATE prestacion_taller SET fecha_ingreso = '$fecha', id_servicio = '$id_servicio', id_vehiculo = '$id_vehiculo' WHERE id_taller = $id_taller";
+    $result = $conn->query($query);
+
+    if(!$result){
+        echo $query;
+        die("No puede ser eliminado debido a que tiene registros relacionados");
+    }
+
+    header('Location: ../views/listado_taller.php');
 }
 
 

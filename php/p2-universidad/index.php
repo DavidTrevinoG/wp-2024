@@ -38,7 +38,9 @@
     <h1 style="text-align: center; font-size: 24px;">Práctica no. 2</h1>
 
     <ul class="menu">
+        <li><a href="views/listado_taller.php">Taller</a></li>
         <li><a href="views/listado_vehiculos.php">Vehículos</a></li>
+        <li><a href="views/listado_servicios.php">Servicios</a></li>
     </ul>
 </body>
 </html>
