@@ -48,6 +48,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="listado_materias.php">Listado de materias</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="listado_asesoria.php">Listado de asesorías</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="listado_tutoria.php">Listado de tutorías</a>
+            </li>
         </ul>
     </div>
 </nav>
