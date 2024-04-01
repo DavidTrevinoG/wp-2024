@@ -15,12 +15,35 @@
     <title>Listado de Carreras</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 </head>
+<style>
+        body {
+            background-size: 100%;
+    
+            background-image: url('pexel.jpg');
+      
+            background-repeat: no-repeat;
+           
+            background-position: center;
+        
+            background-size: cover;
+        
+            background-color: #f0f0f0; /
+        }
+    </style>
+    <style>
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 30px; 
+        }
+    </style>
 <body>
     <?php include 'menu.php'; ?>
 
     <div class="container mt-5">
         <h2>Listado de Carreras</h2>
         <a href="alta_carrera.php" class="btn btn-success mb-3">Agregar Carrera</a>
+        <a href="excel_carrera.php" class="btn btn-success mb-3">Exportar .xslx</a>
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>

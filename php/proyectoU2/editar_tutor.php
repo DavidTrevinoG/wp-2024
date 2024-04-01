@@ -11,6 +11,28 @@
     <title>Editar Tutor</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
 </head>
+<style>
+        body {
+            background-size: 100%;
+    
+            background-image: url('pexel.jpg');
+      
+            background-repeat: no-repeat;
+           
+            background-position: center;
+        
+            background-size: cover;
+        
+            background-color: #f0f0f0; /
+        }
+    </style>
+    <style>
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 30px; 
+        }
+    </style>
 <body>
     <?php include 'menu.php'; ?>
 
@@ -38,7 +60,13 @@
                         while ($row_carrera = $result_carrera->fetch_assoc()):
                             $selected = ($row_carrera['id'] == $row['id_carrera']) ? "selected" : "";
                     ?>
-                        <option value="<?= $row_carrera['id'] ?>" <?= $selected ?>>
+                        <option value="<?= $row_carrera['id'] ?>" <?php 
+
+                            if($row_carrera['id'] == $row['id_carrera']){
+                                echo "selected";
+                            }
+                            
+                        ?>>
                             <?= $row_carrera['nombre'] ?>
                         </option>
                     <?php endwhile ?>

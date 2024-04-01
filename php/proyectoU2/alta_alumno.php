@@ -3,7 +3,30 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
     <title>Alta de Estudiantes</title>
 </head>
+
 <body>
+<style>
+        body {
+            background-size: 100%;
+    
+            background-image: url('pexel.jpg');
+      
+            background-repeat: no-repeat;
+           
+            background-position: center;
+        
+            background-size: cover;
+        
+            background-color: #f0f0f0; /
+        }
+    </style>
+    <style>
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9); 
+            padding: 30px; 
+        }
+    </style>
     <?php include 'menu.php'; ?>
 
     <div class = "container mt-5"> 

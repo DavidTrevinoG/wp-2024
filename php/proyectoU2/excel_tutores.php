@@ -1,4 +1,11 @@
 <?php
+header("Pragma: public");
+header("Expires: 0");
+$filename = "listadoTutores.xls";
+header("Content-type: application/x-msdownload");
+header("Content-Disposition: attachment; filename=$filename");
+header("Pragma: no-cache");
+header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
     // Incluir el archivo de conexión a la base de datos
     include 'bd.php';
 
@@ -40,12 +47,11 @@
         }
     </style>
 <body>
-    <?php include 'menu.php'; ?>
+
 
     <div class="container mt-5">
         <h2>Listado de Tutores</h2>
-        <a href="alta_tutor.php" class="btn btn-success mb-3">Agregar Tutor</a>
-        <a href="excel_tutores.php" class="btn btn-success mb-3">Exportar .xslx</a>
+
         <table class="table table-bordered">
             <thead class="thead-dark">
                 <tr>
@@ -53,7 +59,7 @@
                     <th>Nombre</th>
                     <th>Correo</th>
                     <th>Carrera</th>
-                    <th>Acciones</th>
+                  
                 </tr>
             </thead>
             <tbody>
@@ -63,13 +69,7 @@
                         <td><?= $row['nombre'] ?></td>
                         <td><?= $row['correo'] ?></td>
                         <td><?= $row['nombre_carrera'] ?></td>
-                        <td>
-                            <a href="editar_tutor.php?id=<?= $row['id'] ?>" class="btn btn-primary">Editar</a>
-
-                            <form class="d-inline-block" action="crud.php?baja_tutor=<?= $row['id'] ?>" method="post">
-                                <button type="submit" class="btn btn-danger">Eliminar</button>
-                            </form>
-                        </td>
+                   
                     </tr>
                 <?php endwhile; ?>
             </tbody>
